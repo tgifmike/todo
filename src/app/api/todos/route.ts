@@ -3,7 +3,7 @@ import { prisma } from '@/lib/prisma';
 
 export async function GET() {
 	try {
-const todos = await prisma.Todo.findMany();
+const todos = await prisma.todo.findMany();
 	return NextResponse.json(todos);
 	} catch (error) {
 		 console.error('[GET /api/todos]', error);
